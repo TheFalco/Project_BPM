@@ -63,6 +63,7 @@ def classification(X, y, classifier, seed):
             "recall": recall,
             "f1": f1}
 
+
 if __name__ == '__main__':
 
     for dirty_f in DIRTY_FUNCTIONS:

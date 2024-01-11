@@ -6,6 +6,7 @@ perc = [0.50, 0.45, 0.40, 0.35, 0.30, 0.25, 0.20, 0.15, 0.10, 0.05, 0]
 
 # COMPLETENESS
 
+
 def inject_missing(dataframe, label, seed):
 
     np.random.seed(seed)
@@ -21,6 +22,7 @@ def inject_missing(dataframe, label, seed):
         dirty_dataframes_list.append(df_dirty)
         print("saved dataframe with completeness {}%".format(round((1-p)*100)))
     return dirty_dataframes_list
+
 
 def remove_events(dataframe, seed):
 
@@ -41,6 +43,7 @@ def remove_events(dataframe, seed):
     return dirty_dataframes_list
 
 #ACCURACY
+
 
 #SYNTACTIC
 def wrong_timestamp(dataframe, label, num_characters, seed):
@@ -90,6 +93,7 @@ def wrong_timestamp(dataframe, label, num_characters, seed):
         dirty_dataframes_list.append(df_dirty)
         print("saved dataframe with {}% polluted timestamps".format(round((1-p)*100)))
     return dirty_dataframes_list
+
 
 def wrong_event(dataframe, label, num_characters, seed):
 
@@ -194,6 +198,7 @@ def wrong_event(dataframe, label, num_characters, seed):
         print("saved dataframe with {}% polluted events".format(round((1-p)*100)))
     return dirty_dataframes_list
 
+
 #SEMANTIC
 def same_timestamp_different_events(dataframe, label, seed):
 
@@ -222,8 +227,8 @@ def same_timestamp_different_events(dataframe, label, seed):
         print("saved dataframe with {}% polluted timestamps".format(round((1 - p) * 100)))
     return dirty_dataframes_list
 
-#CONSISTENCY
 
+#CONSISTENCY
 def same_label_different_activities(dataframe, label, target, seed):
 
     np.random.seed(seed)
@@ -253,8 +258,8 @@ def same_label_different_activities(dataframe, label, target, seed):
         print("saved dataframe with {}% polluted activities".format(round((1 - p) * 100)))
     return dirty_dataframes_list
 
-#DUPLICATION
 
+#DUPLICATION
 def irrelevant_events(dataframe, replication, seed):
 
     np.random.seed(seed)
@@ -275,6 +280,7 @@ def irrelevant_events(dataframe, replication, seed):
             dirty_dataframes_list.append(dataframe)
         print("saved dataframe with {}% irrelevant events".format(round((1 - p) * 100)))
     return dirty_dataframes_list
+
 
 if __name__ == '__main__':
 

@@ -5,14 +5,18 @@ from sklearn.utils._testing import ignore_warnings
 import warnings
 import logging
 logging.getLogger('matplotlib.font_manager').disabled = True
+import os
 
-your_path = "/Users/camillasancricca/Desktop/" # example of path
+your_path = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop')
+#your_paath = "/Users/camillasancricca/Desktop/" # example of path
+
 
 def mean(results_all, score):
     list_mean = []
     for res in results_all:
         list_mean.append(res[score])
     return list_mean
+
 
 @ignore_warnings(category=DeprecationWarning)
 def generateFigurePerformance(x_axis, xlabel, results_all, title, legend, encodings, score):
