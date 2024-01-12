@@ -133,9 +133,9 @@ if __name__ == '__main__':
 
         if dirty_f in ["Missing Timestamp","Missing CaseId","Missing Activities","Missing Events"]:
             xlabel = "Completeness"
-        elif dirty_f in ["Wrong Timestamp", "Wrong Activities", "Same Timestamp different Events"]:
+        elif dirty_f in ["Wrong Timestamp", "Wrong Activities", "Same Label different Activities"]:
             xlabel = "Accuracy"
-        elif dirty_f in ["Same Label different Activities"]:
+        elif dirty_f in ["Same Timestamp different Events"]:
             xlabel = "Consistency"
         else:
             xlabel = "Duplication"
