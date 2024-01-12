@@ -11,14 +11,9 @@ from sklearn.utils._testing import ignore_warnings
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import *
 
-#CLASSIFICATION_ALGORITHMS = ["Gradient Boosting"]
-#ENCODINGS = ["Aggregation"]
-
-#fare ciclo for con tutte e 8 le funzioni di sporcaggio, provare con 6 algoritmi e provare anche con un dataset esterno
-
 CLASSIFICATION_ALGORITHMS = ["Random Forest","Gradient Boosting"]
 ENCODINGS = ["Aggregation","Last State","Index-based"]
-DIRTY_FUNCTIONS = ["Same Label different Activities"]#["Missing Timestamp","Missing CaseId","Missing Activities","Missing Events","Wrong Timestamp","Wrong Activities","Same Timestamp different Events","Same Label different Activities","Irrelevant Events"]
+DIRTY_FUNCTIONS = ["Missing Timestamp","Missing CaseId","Missing Activities","Missing Events","Wrong Timestamp","Wrong Activities","Same Timestamp different Events","Same Label different Activities","Irrelevant Events"]
 
 def classification(X, y, classifier, seed):
     X = X.astype(int)

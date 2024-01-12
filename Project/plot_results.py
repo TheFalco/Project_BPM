@@ -7,9 +7,8 @@ import logging
 logging.getLogger('matplotlib.font_manager').disabled = True
 import os
 
-your_path = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop')
-#your_paath = "/Users/camillasancricca/Desktop/" # example of path
-
+your_path = ""
+#your_path = "/Users/camillasancricca/Desktop/" # example of path
 
 def mean(results_all, score):
     list_mean = []
